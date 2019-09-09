@@ -13,15 +13,18 @@
         <li><a href="2.html">비용</a></li>
         <li><a href="3.html">맛집</a></li>
         <p>
-        <input type="button" value="night" onclick="
+      <input id="night_day" type="button" value="night" onclick="
+        if(document.querySelector('#night_day').value === 'night'){
           document.querySelector('body').style.backgroundColor = 'black';
           document.querySelector('body').style.color = 'white';
-        ">
-        <input type="button" value="day" onclick="
+          document.querySelector('#night_day').value = 'day'
+        } else {
           document.querySelector('body').style.backgroundColor = 'white';
           document.querySelector('body').style.color = 'black';
+          document.querySelector('#night_day').value = 'night'
+        }
       ">
-      </p>
+    </p>
       </ol>
       <div id="article">
         <h2>CSS</h2>
